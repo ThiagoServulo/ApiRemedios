@@ -33,6 +33,7 @@ public class Remedio
 		this.quantidade = dados.quantidade();
 		this.validade = dados.validade();
 		this.laboratorio = dados.laboratorio();
+		this.ativo = true;
 	}
 	
 	@Id
@@ -48,11 +49,22 @@ public class Remedio
 	
 	@Enumerated(EnumType.STRING)
 	private Laboratorio laboratorio;
+	private boolean ativo;
 
 	public void atualizarInformacoes(@Valid DadosAtualizaRemedio dados)
 	{
 		this.nome = (dados.nome() == null) ? this.nome : dados.nome();
 		this.via = (dados.via() == null) ? this.via : dados.via();
 		this.laboratorio = (dados.laboratorio() == null) ? this.laboratorio : dados.laboratorio();
+	}
+
+	public void inativar()
+	{
+		this.ativo = false;
+	}
+
+	public void ativar()
+	{
+		this.ativo = true;
 	}
 }

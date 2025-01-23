@@ -1,0 +1,9 @@
+package com.remedios.remedio;
+
+import java.time.LocalDate;
+
+public record DadosDetalhamentoRemedio(Long id, String nome, Via via, String lote, int quantidade, 
+		Laboratorio laboratorio, LocalDate validade, boolean ativo)
+{
+
+}
