@@ -48,6 +48,14 @@ public class RemedioController
 		return ResponseEntity.ok(lista);
 	}
 	
+	@GetMapping ("/{id}")
+	public ResponseEntity<DadosDetalhamentoRemedio> buscarPeloId(@PathVariable Long id)
+	{
+		var remedio = repository.getReferenceById(id);
+		
+		return ResponseEntity.ok(new DadosDetalhamentoRemedio(remedio));
+	}
+	
 	@PutMapping
 	@Transactional //garante o rollback em caso de erro
 	public ResponseEntity<DadosDetalhamentoRemedio> atualizar(@RequestBody @Valid DadosAtualizaRemedio dados)
