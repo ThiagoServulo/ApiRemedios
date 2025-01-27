@@ -1,0 +1,5 @@
+package com.remedios.controllers;
+
+public class AutenticacaoController {
+
+}

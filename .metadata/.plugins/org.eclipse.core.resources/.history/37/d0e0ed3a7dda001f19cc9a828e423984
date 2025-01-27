@@ -1,0 +1,6 @@
+package com.remedios.usuarios;
+
+public class AutenticacaoService
+{
+
+}

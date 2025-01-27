@@ -1,0 +1,5 @@
+package com.remedios.infra;
+
+public class SecurityConfigurations {
+
+}
